@@ -1,6 +1,6 @@
 package Animals;
 
-public class Mammals extends Animals{
+public class Mammals extends Animals {
     private String habitat;
     private int speed;
 
@@ -11,10 +11,16 @@ public class Mammals extends Animals{
     }
 
     public String getHabitat() {
+        if (habitat.isEmpty() || habitat == null || habitat.isBlank()) {
+            this.habitat = "default";
+        }
         return habitat;
     }
 
     public int getSpeed() {
+        if (speed <= 0) {
+            this.speed = 5;
+        }
         return speed;
     }
 
@@ -24,9 +30,7 @@ public class Mammals extends Animals{
 
     @Override
     public String toString() {
-        return "Mammals{" +
-                "habitat='" + habitat + '\'' +
-                ", speed=" + speed +
-                "} " + super.toString();
+        return "Кличка животного: " + getName() + ", Количество лет: " + getYears() + ", Среда проживания: " + getHabitat() + ", Скорость перемещения: " + getSpeed() + super.toString();
+
     }
 }

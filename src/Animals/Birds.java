@@ -9,6 +9,9 @@ public class Birds extends  Animals{
     }
 
     public String getHabitat() {
+        if (habitat.isEmpty() || habitat == null || habitat.isBlank()) {
+            this.habitat = "default";
+        }
         return habitat;
     }
 
@@ -19,8 +22,6 @@ public class Birds extends  Animals{
 
     @Override
     public String toString() {
-        return "Birds{" +
-                "habitat='" + habitat + '\'' +
-                "} " + super.toString();
+        return "Кличка животного: " +getName()+", Количество лет: "+getYears() +", Среда проживания: "+getHabitat()+  super.toString();
     }
 }

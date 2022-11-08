@@ -9,6 +9,9 @@ public class Predators extends  Mammals{
     }
 
     public String getFood() {
+        if (food.isEmpty() || food == null || food.isBlank()) {
+            this.food = "default";
+        }
         return food;
     }
 
@@ -18,8 +21,6 @@ public class Predators extends  Mammals{
 
     @Override
     public String toString() {
-        return "Predators{" +
-                "food='" + food + '\'' +
-                "} " + super.toString();
+        return "Кличка животного: " +getName()+", Количество лет: "+getYears() +", Среда проживания: "+getHabitat()+", Скорость перемещения: "+getSpeed() + ", Тип пищи: " + getFood() +  super.toString();
     }
 }

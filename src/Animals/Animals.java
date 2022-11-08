@@ -12,10 +12,16 @@ public class Animals {
     }
 
     public String getName() {
+        if (name.isEmpty() || name == null || name.isBlank()) {
+            this.name = "default";
+        }
         return name;
     }
 
     public int getYears() {
+        if (years <= 0) {
+            this.years = 1;
+        }
         return years;
     }
 

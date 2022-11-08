@@ -9,6 +9,9 @@ public class Flying extends Birds{
     }
 
     public String getMovementType() {
+        if (movementType.isEmpty() || movementType == null || movementType.isBlank()) {
+            this.movementType = "default";
+        }
         return movementType;
     }
 
@@ -18,8 +21,6 @@ public class Flying extends Birds{
 
     @Override
     public String toString() {
-        return "Flying{" +
-                "movementType='" + movementType + '\'' +
-                "} " + super.toString();
+        return "Кличка животного: " +getName()+", Количество лет: "+getYears() +", Среда проживания: "+getHabitat()+ ", Тип передвижения: " +getMovementType() +  super.toString();
     }
 }

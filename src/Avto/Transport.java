@@ -1,3 +1,5 @@
+package Avto;
+
 public abstract class Transport {
     private String brand;
     private String model;

@@ -1,3 +1,5 @@
+package Avto;
+
 public class Car extends Transport {
     private double engineVolume;
     private String transmission;

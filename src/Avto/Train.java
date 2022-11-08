@@ -1,3 +1,5 @@
+package Avto;
+
 public class Train extends Transport {
     private int costTravel;
     private int timeTravel;
